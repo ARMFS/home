@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://armstronglife.com">
+    <script>
+        // Get the current hostname (e.g., "force.armfs.net")
+        var host = window.location.hostname;
+        var subdomain = host.split(".")[0]; // Extract subdomain (e.g., "force")
+
+        // Define redirections
+        var redirects = {
+            "force": "https://armstrong.lightning.force.com/ltng/switcher?destination=classic",
+            "meet": "https://meet.google.com/pru-uszn-dad",
+            "docs": "https://docs.google.com"
+        };
+
+        // Redirect if a matching subdomain is found
+        if (redirects[subdomain]) {
+            window.location.href = redirects[subdomain];
+        } else {
+            // Default fallback: load the main page
+            window.location.href = "https://armfs.com";
+        }
+    </script>
     <title>ARMSTRONG</title>
 </head>
 <body>
-  
 </body>
 </html>
