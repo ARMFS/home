@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const redirects = {
+            "meet.armfs.com": "/meet/index.html",
+            "force.armfs.com": "/force/index.html",
+            "sul.armfs.com": "/sul/index.html"
+        };
+
+        const hostname = window.location.hostname;
+        const subdomain = hostname.split(".")[0]; // Extract subdomain
+        if (redirects[hostname]) {
+            window.location.replace(redirects[hostname]);
+        } else {
+            document.body.innerHTML = "<h1>Page Not Found</h1>";
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
